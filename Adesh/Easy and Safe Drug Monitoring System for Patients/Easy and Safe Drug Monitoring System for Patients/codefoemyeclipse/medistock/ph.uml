@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_3xw0oSjcEeK7As9AgLSvHw">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_39F64CjcEeK7As9AgLSvHw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_39Y10SjcEeK7As9AgLSvHw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_3_nqcSjcEeK7As9AgLSvHw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_31feECjcEeK7As9AgLSvHw" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_318KACjcEeK7As9AgLSvHw" name="pharma">
+      <packagedElement xmi:type="uml:Package" xmi:id="_318KASjcEeK7As9AgLSvHw" name="daoimpl">
+        <packagedElement xmi:type="uml:Class" xmi:id="_32rw4CjcEeK7As9AgLSvHw" name="FeedBackDAOImpl">
+          <ownedComment xmi:id="_33Ic0CjcEeK7As9AgLSvHw">
+            <body>/** 
+ * The FeedBackDAOImpl Class implements the add feedback action,view feedbacks
+ * cancel feedback action
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_36jkQCjcEeK7As9AgLSvHw" name="pstmt" visibility="package" type="_35z9YyjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_36jkQSjcEeK7As9AgLSvHw" name="stmt" visibility="package" type="_35z9ZijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_36jkQijcEeK7As9AgLSvHw" name="rs" visibility="package" type="_35z9ZCjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_36tVQCjcEeK7As9AgLSvHw" name="con" visibility="package" type="_35z9YijcEeK7As9AgLSvHw"/>
+          <ownedOperation xmi:id="_362fMCjcEeK7As9AgLSvHw" name="closeConnection" visibility="public"/>
+          <ownedOperation xmi:id="_39F64SjcEeK7As9AgLSvHw" name="insertFeedBack" visibility="public">
+            <ownedComment xmi:id="_39PE0CjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Insert FeedBacks(non-Javadoc)Method implements the adding feedbacks into
+ * the database
+ * @see com.collegemagazine.daoI.FeedBackDAOI#insertFeedBack(com.collegemagazine.bean.FeedBackTo)
+ * @param titleis a variable which represents the title of the article
+ * @param nameis a variable which represent the name who post the feedback
+ * @param addressis a variable which indicates the address of the person who
+ * posted the feedback
+ * @param emailis a variable which shows the email of the person
+ * @return flag is a variable which returns the inserted values
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_39F64ijcEeK7As9AgLSvHw" name="fb" type="_35z9aijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_39F64yjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_39PE0SjcEeK7As9AgLSvHw" name="getFeedBack" visibility="public">
+            <ownedComment xmi:id="_39Y10CjcEeK7As9AgLSvHw">
+              <body>/** 
+ * The ViewFeedBackAction Class represents the administrator can view the
+ * feedbacks which are posted by students and faculty from the system
+ * @return vfb is a variable which returns the vector
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_39PE0ijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_39Y10ijcEeK7As9AgLSvHw" name="getAllFeedBack" visibility="public">
+            <ownedComment xmi:id="_39h_wCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View GetAllFeedbacks(non-Javadoc)Method implements to view all feedbacks
+ * posted by users
+ * @see com.collegemagazine.daoI.FeedBackDAOI#getAllFeedBack(int) This
+ * ViewAllFeedbacksAction Class indicate to view all the feedbacks by
+ * administrator which are posted by the article reader in the system
+ * @return vfb is a variable which returns the vector
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_39Y10yjcEeK7As9AgLSvHw" name="fid1">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_39Y11CjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_39h_wSjcEeK7As9AgLSvHw" name="cancelFeedBack" visibility="public">
+            <ownedComment xmi:id="_39h_xCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Cancel Feedbacks(non-Javadoc) implements the deleting the feedbacks which
+ * are posted by the users
+ * @see com.collegemagazine.daoI.FeedBackDAOI#cancelFeedBack(int)
+ * @return flag which is a variable returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_39h_wijcEeK7As9AgLSvHw" name="fid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_39h_wyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_33Ic0SjcEeK7As9AgLSvHw" name="MedicalInfoDAOImpl">
+          <ownedAttribute xmi:id="_39rwwCjcEeK7As9AgLSvHw" name="con" visibility="public" type="_35z9YijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_391hwCjcEeK7As9AgLSvHw" name="flag" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_3-IcsCjcEeK7As9AgLSvHw" name="pstmt" visibility="public" type="_35z9YyjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_3-SNsCjcEeK7As9AgLSvHw" name="rs" visibility="public" type="_35z9ZCjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_3-lIoCjcEeK7As9AgLSvHw" name="stmt" visibility="public" type="_35z9ZijcEeK7As9AgLSvHw"/>
+          <ownedOperation xmi:id="_3-4DkCjcEeK7As9AgLSvHw" name="closeConnection" visibility="public"/>
+          <ownedOperation xmi:id="_3-4DkSjcEeK7As9AgLSvHw" name="addCategory" visibility="public">
+            <ownedComment xmi:id="_3_B0kCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Adding Categories
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3-4DkijcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_3-4DkyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_B0kSjcEeK7As9AgLSvHw" name="addCompany" visibility="public">
+            <ownedComment xmi:id="_3_K-gCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Adding Company action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_B0kijcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_3_B0kyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_K-gSjcEeK7As9AgLSvHw" name="addmedicine" visibility="public">
+            <ownedComment xmi:id="_3_K-hCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Adding medicines Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_K-gijcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_3_K-gyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_K-hSjcEeK7As9AgLSvHw" name="viewComanyDetails" visibility="public">
+            <ownedComment xmi:id="_3_UvgCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Company Details Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_K-hijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_UvgSjcEeK7As9AgLSvHw" name="viewCategoryDetails" visibility="public">
+            <ownedComment xmi:id="_3_eggCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Category Details Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_UvgijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_eggSjcEeK7As9AgLSvHw" name="viewCompaniesDetails" visibility="public">
+            <ownedComment xmi:id="_3_eghCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Companies Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_eggijcEeK7As9AgLSvHw" name="companyid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_3_eggyjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_eghSjcEeK7As9AgLSvHw" name="viewCompanyDetails" visibility="public">
+            <ownedComment xmi:id="_3_nqcCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Company Details Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_eghijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_nqcijcEeK7As9AgLSvHw" name="viewMedicines" visibility="public">
+            <ownedComment xmi:id="_3_xbcCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Medicines Implementation
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_nqcyjcEeK7As9AgLSvHw" name="medicinename">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_3_nqdCjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_xbcSjcEeK7As9AgLSvHw" name="deleteMedicine" visibility="public">
+            <ownedComment xmi:id="_3_6lYCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Delete medicine(non-Javadoc)
+ * @see com.pharma.daoi.MedicineDAOI#deletemedicine(int)DeleteMedicineAction Class implements Deleting the medicine from
+ * database successfully
+ * @return flag which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_xbcijcEeK7As9AgLSvHw" name="productid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_3_xbcyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_3_6lYSjcEeK7As9AgLSvHw" name="viewMedicineupdate" visibility="public">
+            <ownedComment xmi:id="_4AEWYCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * view medicine update details
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_3_6lYijcEeK7As9AgLSvHw" name="pid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_3_6lYyjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AEWYSjcEeK7As9AgLSvHw" name="updateMedicines" visibility="public">
+            <ownedComment xmi:id="_4AOHYCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * update medicines details
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AEWYijcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4AEWYyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AOHYSjcEeK7As9AgLSvHw" name="viewCompanies" visibility="public">
+            <ownedComment xmi:id="_4AOHZCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Companies Implementation
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AOHYijcEeK7As9AgLSvHw" name="companyname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4AOHYyjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AOHZSjcEeK7As9AgLSvHw" name="deleteCompany" visibility="public">
+            <ownedComment xmi:id="_4AXRUCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Delete Company(non-Javadoc)
+ * @see com.pharma.daoi.MedicineDAOI#deletemedicine(int)DeleteMedicineAction Class implements Deleting the medicine from
+ * database successfully
+ * @return flag which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AOHZijcEeK7As9AgLSvHw" name="cid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4AOHZyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AXRUSjcEeK7As9AgLSvHw" name="viewCompanyupdate" visibility="public">
+            <ownedComment xmi:id="_4AhCUCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View update company details
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AXRUijcEeK7As9AgLSvHw" name="cid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4AXRUyjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AhCUSjcEeK7As9AgLSvHw" name="updateCompany" visibility="public">
+            <ownedComment xmi:id="_4AhCVCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Update company details
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AhCUijcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4AhCUyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AhCVSjcEeK7As9AgLSvHw" name="deleteCategory" visibility="public">
+            <ownedComment xmi:id="_4AqzUCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Delete Category Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AhCVijcEeK7As9AgLSvHw" name="categoryid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4AhCVyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4AqzUSjcEeK7As9AgLSvHw" name="updateCategory" visibility="public">
+            <ownedComment xmi:id="_4Az9QCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Update Category Action
+ * @throws FileNotFoundException
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4AqzUijcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4AqzUyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Az9QSjcEeK7As9AgLSvHw" name="viewCategories" visibility="public">
+            <ownedComment xmi:id="_4Az9RSjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Categories Action
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Az9QijcEeK7As9AgLSvHw" name="categpryname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Az9QyjcEeK7As9AgLSvHw" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Az9RCjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Az9RijcEeK7As9AgLSvHw" name="viewCategoryupdate" visibility="public">
+            <ownedComment xmi:id="_4A9uQCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Update Category Action
+ * @throws IOException
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Az9RyjcEeK7As9AgLSvHw" name="categoryid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Az9SCjcEeK7As9AgLSvHw" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Az9SSjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4A9uQSjcEeK7As9AgLSvHw" name="viewCategoryNames" visibility="public">
+            <ownedParameter xmi:id="_4A9uQijcEeK7As9AgLSvHw" name="medicinename">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4A9uQyjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4BQpMCjcEeK7As9AgLSvHw" name="addCustomerOrder" visibility="public">
+            <ownedParameter xmi:id="_4BQpMSjcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4BQpMijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4BQpMyjcEeK7As9AgLSvHw" name="addCustomerTransaction" visibility="public">
+            <ownedParameter xmi:id="_4BQpNCjcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4BQpNSjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4BaaMCjcEeK7As9AgLSvHw" name="addProductQuantity" visibility="public">
+            <ownedComment xmi:id="_4BjkICjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Adding Product details
+ * @throws ConnectionException
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4BaaMSjcEeK7As9AgLSvHw" name="mto" type="_359HUCjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4BaaMijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4BjkISjcEeK7As9AgLSvHw" name="viewMedicineDetails" visibility="public">
+            <ownedComment xmi:id="_4BjkIyjcEeK7As9AgLSvHw">
+              <body>/** 
+ * ViewProducts
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4BjkIijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4BjkJCjcEeK7As9AgLSvHw" name="viewpayments" visibility="public">
+            <ownedParameter xmi:id="_4BjkJSjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4BtVICjcEeK7As9AgLSvHw" name="viewuserpayments" visibility="public">
+            <ownedParameter xmi:id="_4BtVISjcEeK7As9AgLSvHw" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4BtVIijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_33bXwCjcEeK7As9AgLSvHw" name="SecurityDAOImpl">
+          <ownedComment xmi:id="_33bXwSjcEeK7As9AgLSvHw">
+            <body>/** 
+ * SecurityDAOImpl Class implements the Login check action,change password
+ * action,check user action,forget password action
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_4B3GICjcEeK7As9AgLSvHw" name="con" visibility="package" type="_35z9YijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4B3GISjcEeK7As9AgLSvHw" name="desc" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_4CAQECjcEeK7As9AgLSvHw" name="flag" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_4CAQESjcEeK7As9AgLSvHw" name="pstmt" visibility="package" type="_35z9YyjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4CKBECjcEeK7As9AgLSvHw" name="rs" visibility="package" type="_35z9ZCjcEeK7As9AgLSvHw"/>
+          <ownedOperation xmi:id="_4CTLACjcEeK7As9AgLSvHw" name="closeConnection" visibility="public"/>
+          <ownedOperation xmi:id="_4CTLASjcEeK7As9AgLSvHw" name="loginCheck" visibility="public">
+            <ownedComment xmi:id="_4CTLBCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Login Check(non-Javadoc) method implements the user login check is it
+ * valid user name and password or not
+ * @see com.floor.daoi.SecurityDAOI#loginCheck(com.floor.formbeans.profileformbean)
+ * @param loginidis a variable which represents the authenticated user name
+ * @param passwordis a variable which represents the password of the particular
+ * user
+ * @return role is a variable which returns role of the particular user
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4CTLAijcEeK7As9AgLSvHw" name="pro" type="_359HUSjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4CTLAyjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4CTLBSjcEeK7As9AgLSvHw" name="loginaudit" visibility="public">
+            <ownedComment xmi:id="_4Cc8ACjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Method for login audit(non-Javadoc) method represents the logout action
+ * @see com.floor.daoi.SecurityDAOI#loginaudit(java.lang.String)
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4CTLBijcEeK7As9AgLSvHw" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Cc8ASjcEeK7As9AgLSvHw" name="changePassword" visibility="public">
+            <ownedComment xmi:id="_4Cc8BCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Change Password(non-Javadoc) method represents the change the user
+ * password for the user specification
+ * @see com.floor.daoi.SecurityDAOI#changePassword(com.floor.formbeans.profileformbean)
+ * @param loginidis a variable which represents the authenticated user name
+ * @param oldpasswordis a variable which represents the password of the particular
+ * user
+ * @param newpasswordis a variable which represents the password of the particular
+ * user
+ * @return flag which is the variable represents the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Cc8AijcEeK7As9AgLSvHw" name="pf" type="_359HUSjcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4Cc8AyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Cc8BSjcEeK7As9AgLSvHw" name="changeQuestion" visibility="public">
+            <ownedComment xmi:id="_4Cc8CCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Change Secret Question(non-Javadoc)method represents the check the
+ * security question for providing the security for their profiles
+ * @see com.floor.daoi.SecurityDAOI#changeQuestion(com.collegemagazine.formbeans.profileformbean)
+ * @param loginidis a variable which represents the authenticated user name
+ * @param oldpasswordis a variable which represents the password of the particular
+ * user
+ * @param secretequestidis a variable which represents the authenticated their profile
+ * @param secretansis a variable which represents the authenticated their profile
+ * user
+ * @return flag which is the variable represents the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Cc8BijcEeK7As9AgLSvHw" name="regbean" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4Cc8ByjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Cc8CSjcEeK7As9AgLSvHw" name="recoverPasswordByQuestion" visibility="public">
+            <ownedComment xmi:id="_4Cc8DCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Recover Password using Existed Question(non-Javadoc)method is use to
+ * re_get the password
+ * @see com.floor.daoI.SecurityDAOi#recoverPasswordByQuestion(com.floor.formbeans.profileformbean)
+ * @param loginidis a variable which represents the authenticated user name
+ * @param secretequestidis a variable which represents the authenticated their profile
+ * @param secretansis a variable which represents the authenticated their profile
+ * user
+ * @return flag which is the variable represents the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Cc8CijcEeK7As9AgLSvHw" name="regbean" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4Cc8CyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Cc8DSjcEeK7As9AgLSvHw" name="checkUser" visibility="public">
+            <ownedComment xmi:id="_4CmtACjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Check User(non-Javadoc) method is implemented checking the authenticated
+ * user
+ * @see com.floor.daoi.SecurityDAOI#checkUser(java.lang.String)
+ * @return user is a variable which returns the user
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Cc8DijcEeK7As9AgLSvHw" name="userName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Cc8DyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4CmtASjcEeK7As9AgLSvHw" name="checkAvailability" visibility="public">
+            <ownedComment xmi:id="_4CmtBCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Login Availability(non-Javadoc) method implements the availability for
+ * the user at the time of registration
+ * @see com.floor.daoi.SecurityDAOI#checkAvailability(java.lang.String)
+ * @return flag is a variable which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4CmtAijcEeK7As9AgLSvHw" name="userid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4CmtAyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4CmtBSjcEeK7As9AgLSvHw" name="checkAvailabilityforDealer" visibility="public">
+            <ownedComment xmi:id="_4CmtCCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Login Availability(non-Javadoc) method implements the availability for
+ * the user at the time of registration
+ * @see com.floor.daoi.SecurityDAOI#checkAvailability(java.lang.String)
+ * @return flag is a variable which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4CmtBijcEeK7As9AgLSvHw" name="userid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4CmtByjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4CmtCSjcEeK7As9AgLSvHw" name="CustomercheckAvailability" visibility="public">
+            <ownedComment xmi:id="_4Cv28CjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Login Availability(non-Javadoc) method implements the availability for
+ * the user at the time of registration
+ * @see com.floor.daoi.SecurityDAOI#checkAvailability(java.lang.String)
+ * @return flag is a variable which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4CmtCijcEeK7As9AgLSvHw" name="userid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4CmtCyjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_33bXwijcEeK7As9AgLSvHw" name="ProfileDAOImpl">
+          <ownedComment xmi:id="_33khsCjcEeK7As9AgLSvHw">
+            <body>/** 
+ * The ProfileDAOImpl Class implements all the actions like user registration,
+ * view profile action,update user details and delete user action
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_4Cv28SjcEeK7As9AgLSvHw" name="con" visibility="public" type="_35z9YijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4Cv28ijcEeK7As9AgLSvHw" name="flag" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_4C5n8CjcEeK7As9AgLSvHw" name="pstmt" visibility="public" type="_35z9YyjcEeK7As9AgLSvHw"/>
+          <ownedOperation xmi:id="_4C5n8SjcEeK7As9AgLSvHw" name="closeConnection" visibility="public"/>
+          <ownedOperation xmi:id="_4C5n8ijcEeK7As9AgLSvHw" name="changePass" visibility="public">
+            <ownedParameter xmi:id="_4C5n8yjcEeK7As9AgLSvHw" name="pro" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4C5n9CjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DDY8CjcEeK7As9AgLSvHw" name="changeQuestion" visibility="public">
+            <ownedParameter xmi:id="_4DDY8SjcEeK7As9AgLSvHw" name="pro" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4DDY8ijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DDY8yjcEeK7As9AgLSvHw" name="checkUser" visibility="public">
+            <ownedComment xmi:id="_4DDY9ijcEeK7As9AgLSvHw">
+              <body>/** 
+ * CheckUser method implements the check the user authentication depending
+ * upon the UserName and password
+ * @return user which is a variable represents the checking user
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4DDY9CjcEeK7As9AgLSvHw" name="userName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4DDY9SjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DDY9yjcEeK7As9AgLSvHw" name="insertNewUser" visibility="public">
+            <ownedComment xmi:id="_4DDY-ijcEeK7As9AgLSvHw">
+              <body>/** 
+ * This is the User Registration method which performs the registration
+ * action.
+ * @param firstnameis a variable which shows the first name of the user.
+ * @param lastnameis a variable which indicate the last name of the user.
+ * @param birthdateis a variable which represents the date of birth of the user.
+ * @param emailis a variable which shows the email address of the user.
+ * @param usernameis a variable which represents the login id for a user,using
+ * this user name he/she enter in to the system.
+ * @param passwordis a variable which represents the password for security and
+ * all the variables also
+ * @return flag which gives result either true or false.
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4DDY-CjcEeK7As9AgLSvHw" name="pro" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4DDY-SjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DDY-yjcEeK7As9AgLSvHw" name="getProfile" visibility="public">
+            <ownedParameter xmi:id="_4DDY_CjcEeK7As9AgLSvHw" name="loginname">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4DDY_SjcEeK7As9AgLSvHw" name="path">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4DDY_ijcEeK7As9AgLSvHw" name="return" type="_359HWijcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DMi4CjcEeK7As9AgLSvHw" name="updateProfile" visibility="public">
+            <ownedComment xmi:id="_4DMi4yjcEeK7As9AgLSvHw">
+              <body>/** 
+ * This Update Profile method represents the modifying the user details when
+ * the user view their profile.
+ * @param firstnameis a variable represents the user first name.
+ * @param lastnameis a variable shows the user last name and other variables.
+ * @return flag is variable which returns the true or false
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4DMi4SjcEeK7As9AgLSvHw" name="prof" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4DMi4ijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DMi5CjcEeK7As9AgLSvHw" name="logout" visibility="public">
+            <ownedParameter xmi:id="_4DMi5SjcEeK7As9AgLSvHw" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4DMi5ijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DMi5yjcEeK7As9AgLSvHw" name="logout1" visibility="public">
+            <ownedParameter xmi:id="_4DMi6CjcEeK7As9AgLSvHw" name="user">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4DWT4CjcEeK7As9AgLSvHw" name="passwordRecovery" visibility="public">
+            <ownedParameter xmi:id="_4DWT4SjcEeK7As9AgLSvHw" name="pro" type="_359HWijcEeK7As9AgLSvHw"/>
+            <ownedParameter xmi:id="_4DWT4ijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Dfd0CjcEeK7As9AgLSvHw" name="changeAccountStatus" visibility="public">
+            <ownedParameter xmi:id="_4Dfd0SjcEeK7As9AgLSvHw" name="loginid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dfd0ijcEeK7As9AgLSvHw" name="status">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dfd0yjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_33uSsCjcEeK7As9AgLSvHw" name="UserDAOImpl">
+          <ownedComment xmi:id="_33uSsSjcEeK7As9AgLSvHw">
+            <body>/** 
+ * UserDAOImpl Class implements the view users action,update user status
+ * action,view profile action and delete user action
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_4Dfd1CjcEeK7As9AgLSvHw" name="con" visibility="public" type="_35z9YijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4Dfd1SjcEeK7As9AgLSvHw" name="pstmt" visibility="package" type="_35z9YyjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4DpO0CjcEeK7As9AgLSvHw" name="stmt" visibility="package" type="_35z9ZijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4DpO0SjcEeK7As9AgLSvHw" name="rs" visibility="package" type="_35z9ZCjcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4DpO0ijcEeK7As9AgLSvHw" name="flag" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_4DpO0yjcEeK7As9AgLSvHw"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_4Dy_0CjcEeK7As9AgLSvHw" name="closeConnection" visibility="public"/>
+          <ownedOperation xmi:id="_4Dy_0SjcEeK7As9AgLSvHw" name="viewUser" visibility="public">
+            <ownedComment xmi:id="_4Dy_1ijcEeK7As9AgLSvHw">
+              <body>/** 
+ * The ViewUserAction method represents the view the number of user present
+ * in the system.Administrator can have only this permission
+ * @return v is a variable which represents the vector value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Dy_0ijcEeK7As9AgLSvHw" name="realpath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_0yjcEeK7As9AgLSvHw" name="user">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_1CjcEeK7As9AgLSvHw" name="status">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_1SjcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Dy_1yjcEeK7As9AgLSvHw" name="updateUserStatus" visibility="public">
+            <ownedComment xmi:id="_4Dy_2ijcEeK7As9AgLSvHw">
+              <body>/** 
+ * Update User Status(non-Javadoc)
+ * @see com.floor.daoi.UserDAOi#updateUserStatus(int) This
+ * UpdateUserStatusAction Class represents the user status here
+ * administrator can update the user status
+ * @return flag is a variable which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Dy_2CjcEeK7As9AgLSvHw" name="userid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_2SjcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Dy_2yjcEeK7As9AgLSvHw" name="viewprofile" visibility="public">
+            <ownedComment xmi:id="_4Dy_3yjcEeK7As9AgLSvHw">
+              <body>/** 
+ * View Profile(non-Javadoc)
+ * @see com.floor.daoi.UserDAOi#viewprofile(java.lang.String,java.lang.String) The ViewProfileAction Class represents the view
+ * the user own profile when he/she enter into the system with their
+ * user name and password
+ * @return v is a variable which returns the vector value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Dy_3CjcEeK7As9AgLSvHw" name="path">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_3SjcEeK7As9AgLSvHw" name="user">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_3ijcEeK7As9AgLSvHw" name="return" type="_35z9aCjcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4Dy_4CjcEeK7As9AgLSvHw" name="deleteUser" visibility="public">
+            <ownedComment xmi:id="_4D8JwCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * Delete User(non-Javadoc)
+ * @see com.floor.daoi.UserDAOi#deleteUser(int) DeleteUserAction
+ * Class implements Deleting the user from database successfully
+ * @return flag which returns the flag value
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4Dy_4SjcEeK7As9AgLSvHw" name="userid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4Dy_4ijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_33uSsijcEeK7As9AgLSvHw" name="dbutil">
+        <packagedElement xmi:type="uml:Class" xmi:id="_33uSsyjcEeK7As9AgLSvHw" name="DBConnectionFactory">
+          <ownedAttribute xmi:id="_4D8JwSjcEeK7As9AgLSvHw" name="mCon" visibility="private" isStatic="true" type="_35z9YijcEeK7As9AgLSvHw"/>
+          <ownedAttribute xmi:id="_4D8JwijcEeK7As9AgLSvHw" name="mProps" visibility="private" isStatic="true" type="_359HXijcEeK7As9AgLSvHw"/>
+          <ownedOperation xmi:id="_4D8JwyjcEeK7As9AgLSvHw" name="getProperties" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_4D8JxSjcEeK7As9AgLSvHw">
+              <body>/** 
+ * @return the props
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4D8JxCjcEeK7As9AgLSvHw" name="return" type="_359HXijcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4D8JxijcEeK7As9AgLSvHw" name="setProperties" visibility="public">
+            <ownedComment xmi:id="_4D8JyCjcEeK7As9AgLSvHw">
+              <body>/** 
+ * @param propsapplication properties object
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_4D8JxyjcEeK7As9AgLSvHw" name="aProps" type="_359HXijcEeK7As9AgLSvHw"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4D8JySjcEeK7As9AgLSvHw" name="getConnection" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_4D8JyijcEeK7As9AgLSvHw" name="return" type="_35z9YijcEeK7As9AgLSvHw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_4D8JyyjcEeK7As9AgLSvHw" name="getSequenceID" visibility="public">
+            <ownedParameter xmi:id="_4D8JzCjcEeK7As9AgLSvHw" name="tableName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4D8JzSjcEeK7As9AgLSvHw" name="pkid">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_4D8JzijcEeK7As9AgLSvHw" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_35z9bSjcEeK7As9AgLSvHw" name="SqlConstants"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_35z9aSjcEeK7As9AgLSvHw" name="bean">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_35z9aijcEeK7As9AgLSvHw" name="FeedbackTo"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HUCjcEeK7As9AgLSvHw" name="MedicalInfoTo"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HUSjcEeK7As9AgLSvHw" name="ProfileTo"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_35z9ayjcEeK7As9AgLSvHw" name="daoi">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_35z9bCjcEeK7As9AgLSvHw" name="FeedbackDAOI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HUijcEeK7As9AgLSvHw" name="MedicalInfoDAOI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HWCjcEeK7As9AgLSvHw" name="SecurityDAOI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HWyjcEeK7As9AgLSvHw" name="ProfileDAOI"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HXCjcEeK7As9AgLSvHw" name="UserDAOI"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_35z9bijcEeK7As9AgLSvHw" name="exceptions">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_35z9byjcEeK7As9AgLSvHw" name="ConnectionException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_359HUyjcEeK7As9AgLSvHw" name="util">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HVCjcEeK7As9AgLSvHw" name="DateWrapper"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HVSjcEeK7As9AgLSvHw" name="LoggerManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_359HWSjcEeK7As9AgLSvHw" name="formbeans">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_359HWijcEeK7As9AgLSvHw" name="profileformbean"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_35z9YCjcEeK7As9AgLSvHw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_35z9YSjcEeK7As9AgLSvHw" name="sql">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9YijcEeK7As9AgLSvHw" name="Connection"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9YyjcEeK7As9AgLSvHw" name="PreparedStatement"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9ZCjcEeK7As9AgLSvHw" name="ResultSet"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9ZSjcEeK7As9AgLSvHw" name="SQLException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9ZijcEeK7As9AgLSvHw" name="Statement"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9dyjcEeK7As9AgLSvHw" name="Blob"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_359HVijcEeK7As9AgLSvHw" name="CallableStatement"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_359HVyjcEeK7As9AgLSvHw" name="Types"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_359HXSjcEeK7As9AgLSvHw" name="DriverManager"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_35z9ZyjcEeK7As9AgLSvHw" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9aCjcEeK7As9AgLSvHw" name="Vector"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_359HXijcEeK7As9AgLSvHw" name="Properties"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_35z9cCjcEeK7As9AgLSvHw" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9cSjcEeK7As9AgLSvHw" name="File"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9cijcEeK7As9AgLSvHw" name="FileInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9cyjcEeK7As9AgLSvHw" name="FileNotFoundException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9dCjcEeK7As9AgLSvHw" name="FileOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9dSjcEeK7As9AgLSvHw" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_35z9dijcEeK7As9AgLSvHw" name="OutputStream"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

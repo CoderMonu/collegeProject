@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="medistock"
+  id="myeclipse.1350541420187"
+  context-root="/PharmacyInformationSystem"
+  j2ee-spec="5.0"
+  archive="medistock.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

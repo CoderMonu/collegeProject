@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.pharma.util.InitServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/config/system.properties</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/initservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ExportXLS</servlet-name>
+		<servlet-class>com.pharma.exports.ExportXLS</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>RegisterAction</servlet-name>
+		<servlet-class>com.pharma.actions.RegisterAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginAction</servlet-name>
+		<servlet-class>com.pharma.actions.LoginAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ChangeQuestionAction</servlet-name>
+		<servlet-class>com.pharma.actions.ChangeQuestionAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<servlet-class>com.pharma.actions.ChangePasswordAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<servlet-class>com.pharma.actions.RecoverPasswordAction</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UpdateAction</servlet-name>
+		<servlet-class>com.pharma.actions.UpdateAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ViewUserAction</servlet-name>
+		<servlet-class>com.pharma.actions.ViewUserAction</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UpdateUserStatusAction</servlet-name>
+		<servlet-class>com.pharma.actions.UpdateUserStatusAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ViewProfileAction</servlet-name>
+		<servlet-class>com.pharma.actions.ViewProfileAction</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CheckUserAction</servlet-name>
+		<servlet-class>com.pharma.actions.CheckUserAction</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LogOutAction</servlet-name>
+		<servlet-class>com.pharma.actions.LogOutAction</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteUserAction</servlet-name>
+		<servlet-class>com.pharma.actions.DeleteUserAction</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of Adding company Action</description>
+    <display-name>This is the display name of Adding company Action</display-name>
+    <servlet-name>AddCompanyAction</servlet-name>
+    <servlet-class>com.pharma.actions.AddCompanyAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Adding category Action</description>
+    <display-name>This is the display name of Adding category Action</display-name>
+    <servlet-name>AddCategoryAction</servlet-name>
+    <servlet-class>com.pharma.actions.AddCategoryAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Adding medicine Action</description>
+    <display-name>This is the display name of Adding medicine Action</display-name>
+    <servlet-name>AddMedicineAction</servlet-name>
+    <servlet-class>com.pharma.actions.AddMedicineAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Company Details Action</description>
+    <display-name>This is the display name of View Company Details Action</display-name>
+    <servlet-name>ViewCompanyDetailsAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCompanyDetailsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Category Details Action</description>
+    <display-name>This is the display name of View Category Details Action</display-name>
+    <servlet-name>ViewCategoryDetailsAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCategoryDetailsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Companies Details Action</description>
+    <display-name>This is the display name of View Companies Details Action</display-name>
+    <servlet-name>ViewCompaniesDetailsAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCompaniesDetailsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Company Details Action</description>
+    <display-name>This is the display name of View Company Details Action</display-name>
+    <servlet-name>ViewCompanyAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCompanyAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description ofDelete Medicine Action</description>
+    <display-name>This is the display name of Delete Medicine Action</display-name>
+    <servlet-name>DeleteMedicineAction</servlet-name>
+    <servlet-class>com.pharma.actions.DeleteMedicineAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Medicine Action</description>
+    <display-name>This is the display name of View Medicine Action</display-name>
+    <servlet-name>ViewMedicinesAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewMedicinesAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Update Medicine Action</description>
+    <display-name>This is the display name of View Update Medicine Action</display-name>
+    <servlet-name>ViewUpdateMedicineAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewUpdateMedicineAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Update Medicine Action</description>
+    <display-name>This is the display name of Update Medicine Action</display-name>
+    <servlet-name>UpdateMedicineAction</servlet-name>
+    <servlet-class>com.pharma.actions.UpdateMedicineAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Delete Company Action</description>
+    <display-name>This is the display name of Delete Company Action</display-name>
+    <servlet-name>DeleteCompanyAction</servlet-name>
+    <servlet-class>com.pharma.actions.DeleteCompanyAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Company Action</description>
+    <display-name>This is the display name of View Company Action</display-name>
+    <servlet-name>ViewUpdateCompanyAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewUpdateCompanyAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Update Company Action</description>
+    <display-name>This is the display name of Update Company Action</display-name>
+    <servlet-name>UpdateCompanyAction</servlet-name>
+    <servlet-class>com.pharma.actions.UpdateCompanyAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Category Details Action</description>
+    <display-name>This is the display name of View Category Details Action</display-name>
+    <servlet-name>ViewCategoryAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCategoryAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of View Update Category Details Action</description>
+    <display-name>This is the display name of View Update Category Details Action</display-name>
+    <servlet-name>ViewUpdateCategoryAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewUpdateCategoryAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Delete Category Details Action</description>
+    <display-name>This is the display name of Delete Category Details Action</display-name>
+    <servlet-name>DeleteCategoryAction</servlet-name>
+    <servlet-class>com.pharma.actions.DeleteCategoryAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of Update Category Details Action</description>
+    <display-name>This is the display name of Update Category Details Action</display-name>
+    <servlet-name>UpdateCategoryAction</servlet-name>
+    <servlet-class>com.pharma.actions.UpdateCategoryAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the Category  Action</description>
+    <display-name>This is the display name of the Category Action</display-name>
+    <servlet-name>ViewCategoryNamesAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCategoryNamesAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the ViewCompaniesForMedicineActions</description>
+    <display-name>This is the display name of the ViewCompaniesForMedicineActions</display-name>
+    <servlet-name>ViewCompaniesForMedicineActions</servlet-name>
+    <servlet-class>com.pharma.actions.ViewCompaniesForMedicineActions</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the MedicineOrderAction</description>
+    <display-name>This is the display name of the MedicineOrderAction</display-name>
+    <servlet-name>MedicineOrderAction</servlet-name>
+    <servlet-class>com.pharma.actions.MedicineOrderAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the MedicineOrderTransactionAction</description>
+    <display-name>This is the display name of the MedicineOrderTransactionAction</display-name>
+    <servlet-name>MedicineOrderTransactionAction</servlet-name>
+    <servlet-class>com.pharma.actions.MedicineOrderTransactionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the ViewMedicalDetailsAction</description>
+    <display-name>This is the display name of the ViewMedicalDetailsAction</display-name>
+    <servlet-name>ViewMedicalDetailsAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewMedicalDetailsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the AddProductQuantity</description>
+    <display-name>This is the display name of the AddProductQuantity</display-name>
+    <servlet-name>AddProductQuantity</servlet-name>
+    <servlet-class>com.pharma.actions.AddProductQuantity</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the ViewMedicineNamesAction</description>
+    <display-name>This is the display name of the ViewMedicineNamesAction</display-name>
+    <servlet-name>ViewMedicineNamesAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewMedicineNamesAction</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <description>This is the description of the ViewAllFeedbacksAction</description>
+    <display-name>This is the display name of the ViewAllFeedbacksAction</display-name>
+    <servlet-name>ViewAllFeedbacksAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewAllFeedbacksAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the ViewFeedBackAction</description>
+    <display-name>This is the display name of the ViewFeedBackAction</display-name>
+    <servlet-name>ViewFeedBackAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewFeedBackAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the DeleteFeedbackAction</description>
+    <display-name>This is the display name of the DeleteFeedbackAction</display-name>
+    <servlet-name>DeleteFeedbackAction</servlet-name>
+    <servlet-class>com.pharma.actions.DeleteFeedbackAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the PostFeedBackAction</description>
+    <display-name>This is the display name of the PostFeedBackAction</display-name>
+    <servlet-name>PostFeedBackAction</servlet-name>
+    <servlet-class>com.pharma.actions.PostFeedBackAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the ViewPaymentsAction</description>
+    <display-name>This is the display name of the ViewPaymentsAction</display-name>
+    <servlet-name>ViewPaymentsAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewPaymentsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the ViewUserPaybillsAction</description>
+    <display-name>This is the display name of the ViewUserPaybillsAction</display-name>
+    <servlet-name>ViewUserPaybillsAction</servlet-name>
+    <servlet-class>com.pharma.actions.ViewUserPaybillsAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the PrintBillAction</description>
+    <display-name>This is the display name of the PrintBillAction</display-name>
+    <servlet-name>PrintBillAction</servlet-name>
+    <servlet-class>com.pharma.actions.PrintBillAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of theSellMedicineAction</description>
+    <display-name>This is the display name of the SellMedicineAction</display-name>
+    <servlet-name>SellMedicineAction</servlet-name>
+    <servlet-class>com.pharma.actions.SellMedicineAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of the SellTrasactionAction</description>
+    <display-name>This is the display name of the SellTrasactionAction</display-name>
+    <servlet-name>SellTrasactionAction</servlet-name>
+    <servlet-class>com.pharma.actions.SellTrasactionAction</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>CheckUserAction</servlet-name>
+		<url-pattern>/CheckUserAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogOutAction</servlet-name>
+		<url-pattern>/LogOutAction</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet-mapping>
+		<servlet-name>DeleteUserAction</servlet-name>
+		<url-pattern>/DeleteUserAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ExportXLS</servlet-name>
+		<url-pattern>/ExportXLS</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterAction</servlet-name>
+		<url-pattern>/RegisterAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginAction</servlet-name>
+		<url-pattern>/LoginAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangeQuestionAction</servlet-name>
+		<url-pattern>/ChangeQuestionAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<url-pattern>/ChangePasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<url-pattern>/RecoverPasswordAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UpdateAction</servlet-name>
+		<url-pattern>/UpdateAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ViewUserAction</servlet-name>
+		<url-pattern>/ViewUserAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUserStatusAction</servlet-name>
+		<url-pattern>/UpdateUserStatusAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewProfileAction</servlet-name>
+		<url-pattern>/ViewProfileAction</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCompanyAction</servlet-name>
+    <url-pattern>/AddCompanyAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCategoryAction</servlet-name>
+    <url-pattern>/AddCategoryAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddMedicineAction</servlet-name>
+    <url-pattern>/AddMedicineAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCompanyDetailsAction</servlet-name>
+    <url-pattern>/ViewCompanyDetailsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCategoryDetailsAction</servlet-name>
+    <url-pattern>/ViewCategoryDetailsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCompaniesDetailsAction</servlet-name>
+    <url-pattern>/ViewCompaniesDetailsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCompanyAction</servlet-name>
+    <url-pattern>/ViewCompanyAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteMedicineAction</servlet-name>
+    <url-pattern>/DeleteMedicineAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewMedicinesAction</servlet-name>
+    <url-pattern>/ViewMedicinesAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUpdateMedicineAction</servlet-name>
+    <url-pattern>/ViewUpdateMedicineAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateMedicineAction</servlet-name>
+    <url-pattern>/UpdateMedicineAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCompanyAction</servlet-name>
+    <url-pattern>/DeleteCompanyAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUpdateCompanyAction</servlet-name>
+    <url-pattern>/ViewUpdateCompanyAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCompanyAction</servlet-name>
+    <url-pattern>/UpdateCompanyAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCategoryAction</servlet-name>
+    <url-pattern>/ViewCategoryAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUpdateCategoryAction</servlet-name>
+    <url-pattern>/ViewUpdateCategoryAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCategoryAction</servlet-name>
+    <url-pattern>/DeleteCategoryAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCategoryAction</servlet-name>
+    <url-pattern>/UpdateCategoryAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCategoryNamesAction</servlet-name>
+    <url-pattern>/ViewCategoryNamesAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewCompaniesForMedicineActions</servlet-name>
+    <url-pattern>/ViewCompaniesForMedicineActions</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MedicineOrderAction</servlet-name>
+    <url-pattern>/MedicineOrderAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MedicineOrderTransactionAction</servlet-name>
+    <url-pattern>/MedicineOrderTransactionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewMedicalDetailsAction</servlet-name>
+    <url-pattern>/ViewMedicalDetailsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddProductQuantity</servlet-name>
+    <url-pattern>/AddProductQuantity</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewMedicineNamesAction</servlet-name>
+    <url-pattern>/ViewMedicineNamesAction</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet-mapping>
+    <servlet-name>ViewAllFeedbacksAction</servlet-name>
+    <url-pattern>/ViewAllFeedbacksAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewFeedBackAction</servlet-name>
+    <url-pattern>/ViewFeedBackAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFeedbackAction</servlet-name>
+    <url-pattern>/DeleteFeedbackAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PostFeedBackAction</servlet-name>
+    <url-pattern>/PostFeedBackAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewPaymentsAction</servlet-name>
+    <url-pattern>/ViewPaymentsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewUserPaybillsAction</servlet-name>
+    <url-pattern>/ViewUserPaybillsAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrintBillAction</servlet-name>
+    <url-pattern>/PrintBillAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SellMedicineAction</servlet-name>
+    <url-pattern>/SellMedicineAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SellTrasactionAction</servlet-name>
+    <url-pattern>/SellTrasactionAction</url-pattern>
+  </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>./jsps/home.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

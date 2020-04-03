@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="ab" database="PHARMACYINFO" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="ADDRESSES">
+      <Drawing expanded="true" location="397,40" dimensions="206,227" />
+      <Columns>
+        <Column name="USERIDREF" primary_key="true" foreign_key="true" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ADDRESSID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ADDRESSTYPE" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="HOUSENO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="STREET" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+        <Column name="CITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="40" />
+        </Column>
+        <Column name="STATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="COUNTRY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="PINCODE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="PHNO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="15" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="CATEGORY">
+      <Drawing expanded="true" location="414,758" dimensions="222,128" />
+      <Columns>
+        <Column name="CATEGORYID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CATEGORYNAME" primary_key="false" foreign_key="false" required="false" unique="true">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+        <Column name="CATEGORYPHOTO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="COMPANYIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="MDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="FEEDBACK">
+      <Drawing expanded="true" location="706,759" dimensions="184,149" />
+      <Columns>
+        <Column name="FID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FEEDBACK" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="500" />
+        </Column>
+        <Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+        <Column name="ADRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+        <Column name="PHNO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="15" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="MANUFACTURECOMPANYDETAILS">
+      <Drawing expanded="true" location="0,685" dimensions="230,129" />
+      <Columns>
+        <Column name="COMPANYID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="COMPANYNAME" primary_key="false" foreign_key="false" required="false" unique="true">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="500" />
+        </Column>
+        <Column name="PHNO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="15" />
+        </Column>
+        <Column name="EMAIL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="MEDICINECOST_ALLOWER">
+      <Drawing expanded="true" location="59,97" dimensions="250,147" />
+      <Columns>
+        <Column name="PRODUCTID_ALLOWER" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PRODUCTID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="TOTAL_QUANTITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="AVAIL_QUANTITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PRICE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10,2" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="MEDICINE_ORDERS">
+      <Drawing expanded="true" location="714,452" dimensions="219,169" />
+      <Columns>
+        <Column name="ORDERID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PRODUCTID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ORDER_QUANTITY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="ORDER_DATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="TOTALPRICE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="30" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="PAYMENT">
+      <Drawing expanded="true" location="708,108" dimensions="202,147" />
+      <Columns>
+        <Column name="PAYMENTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="USERID" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="PAY_DATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="PAYMENTMODE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="PAIDBY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="ORDERIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="PRODUCT">
+      <Drawing expanded="true" location="-12,370" dimensions="234,187" />
+      <Columns>
+        <Column name="PRODUCTID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="CATEGORYIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="MADICINENAME" primary_key="false" foreign_key="false" required="false" unique="true">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+        <Column name="MANUFACTUREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="EXPIRYDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="COMPANYIDREF" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="BESTBEFORE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="PURPOSE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="500" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="USERDETAILS">
+      <Drawing expanded="true" location="406,305" dimensions="243,329" />
+      <Columns>
+        <Column name="USERID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="22" />
+        </Column>
+        <Column name="FIRSTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="LASTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="DOB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="FORGOTPWQUESTION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="500" />
+        </Column>
+        <Column name="FORGOTPWANSWER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="100" />
+        </Column>
+        <Column name="PHOTOGRAPH" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="BLOB" size="4000" />
+        </Column>
+        <Column name="EMAILID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="FAXNO" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+        <Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="DOR" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="10" />
+        </Column>
+        <Column name="LOGINID" primary_key="false" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="50" />
+        </Column>
+        <Column name="LOGINTYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="ADDRESSES_R01">
+      <Details primary_table="USERDETAILS" foreign_table="ADDRESSES">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="CATEGORY_R01">
+      <Details primary_table="MANUFACTURECOMPANYDETAILS" foreign_table="CATEGORY">
+        <PrimaryKeys>
+          <ColumnName name="COMPANYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COMPANYIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="MEDICINECOST_ALLOWER_R01">
+      <Details primary_table="USERDETAILS" foreign_table="MEDICINECOST_ALLOWER">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="MEDICINECOST_ALLOWER_R02">
+      <Details primary_table="PRODUCT" foreign_table="MEDICINECOST_ALLOWER">
+        <PrimaryKeys>
+          <ColumnName name="PRODUCTID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="PRODUCTID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="PAYMENT_R02">
+      <Details primary_table="MEDICINE_ORDERS" foreign_table="PAYMENT">
+        <PrimaryKeys>
+          <ColumnName name="ORDERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="ORDERIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="PAYMENT_R01">
+      <Details primary_table="USERDETAILS" foreign_table="PAYMENT">
+        <PrimaryKeys>
+          <ColumnName name="USERID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="USERID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="PRODUCT_R02">
+      <Details primary_table="MANUFACTURECOMPANYDETAILS" foreign_table="PRODUCT">
+        <PrimaryKeys>
+          <ColumnName name="COMPANYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="COMPANYIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="PRODUCT_R01">
+      <Details primary_table="CATEGORY" foreign_table="PRODUCT">
+        <PrimaryKeys>
+          <ColumnName name="CATEGORYID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="CATEGORYIDREF" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

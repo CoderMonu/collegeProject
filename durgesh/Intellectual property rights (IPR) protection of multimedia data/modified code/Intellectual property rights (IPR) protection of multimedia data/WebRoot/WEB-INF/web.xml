@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.water.util.InitServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/config/system.properties</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/InitServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>CheckUserAction</servlet-name>
+		<servlet-class>com.water.action.CheckUserAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>RegisterAction</servlet-name>
+		<servlet-class>com.water.action.RegisterAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginAction</servlet-name>
+		<servlet-class>com.water.action.LoginAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>NewPassword</servlet-name>
+		<servlet-class>com.water.action.NewPasswordAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<servlet-class>com.water.action.ChangePasswordAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ChangeQuestionAction</servlet-name>
+		<servlet-class>com.water.action.ChangeQuestionAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LogoutAction</servlet-name>
+		<servlet-class>com.water.action.LogoutAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<servlet-class>com.water.action.RecoverPasswordAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ViewUsers</servlet-name>
+		<servlet-class>com.water.action.ViewUsersAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UpdateUserStatusAction</servlet-name>
+		<servlet-class>com.water.action.UpdateUserStatusAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ViewProfileAction</servlet-name>
+		<servlet-class>com.water.action.ViewProfileAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>UpdateUserProfileAction</servlet-name>
+		<servlet-class>com.water.action.UpdateUserProfileAction</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DeleteUserAction</servlet-name>
+		<servlet-class>com.water.action.DeleteUserAction</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>OutboxAction</servlet-name>
+		<servlet-class>com.water.action.OutboxAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>SendMailAction</servlet-name>
+		<servlet-class>com.water.action.SendMailAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ViewMailBody</servlet-name>
+		<servlet-class>com.water.action.ViewMailBody</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ComposeMail</servlet-name>
+		<servlet-class>com.water.action.ComposeMailAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DeleteMailsAction</servlet-name>
+		<servlet-class>com.water.action.DeleteMailsAction</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>TextWaterMarkAction</servlet-name>
+		<servlet-class>com.water.action.TextWaterMarkAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>WaterMarkTextKeyAction</servlet-name>
+		<servlet-class>com.water.action.WaterMarkTextKeyAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ImageWaterMarkAction</servlet-name>
+		<servlet-class>com.water.action.ImageWaterMarkAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>WaterMarkImageKeyAction</servlet-name>
+		<servlet-class>com.water.action.WaterMarkImageKeyAction</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendWaterMarkImage</servlet-name>
+    <servlet-class>com.water.action.SendWaterMarkImage</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SendWaterMarkImageAction</servlet-name>
+    <servlet-class>com.water.action.SendWaterMarkImageAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>OutboxWaterMarkingImageAction</servlet-name>
+    <servlet-class>com.water.action.OutboxWaterMarkingImageAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteWaterMarkImagesAction</servlet-name>
+    <servlet-class>com.water.action.DeleteWaterMarkImagesAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VideoAudioEmbedAction</servlet-name>
+    <servlet-class>com.water.action.VideoAudioEmbedAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchMailIdAction</servlet-name>
+    <servlet-class>com.water.action.SearchMailIdAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileEncriptionAction</servlet-name>
+    <servlet-class>com.water.action.FileEncriptionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileDecryptionAction</servlet-name>
+    <servlet-class>com.water.action.FileDecryptionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileDeEmbedAction</servlet-name>
+    <servlet-class>com.water.action.FileDeEmbedAction</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>CheckUserAction</servlet-name>
+		<url-pattern>/CheckUserAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterAction</servlet-name>
+		<url-pattern>/RegisterAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginAction</servlet-name>
+		<url-pattern>/LoginAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NewPassword</servlet-name>
+		<url-pattern>/NewPassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<url-pattern>/ChangePasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangeQuestionAction</servlet-name>
+		<url-pattern>/ChangeQuestionAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutAction</servlet-name>
+		<url-pattern>/LogoutAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<url-pattern>/RecoverPasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewUsers</servlet-name>
+		<url-pattern>/ViewUsers</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUserStatusAction</servlet-name>
+		<url-pattern>/UpdateUserStatusAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewProfileAction</servlet-name>
+		<url-pattern>/ViewProfileAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateUserProfileAction</servlet-name>
+		<url-pattern>/UpdateUserProfileAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteUserAction</servlet-name>
+		<url-pattern>/DeleteUserAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>OutboxAction</servlet-name>
+		<url-pattern>/OutboxAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SendMailAction</servlet-name>
+		<url-pattern>/SendMailAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewMailBody</servlet-name>
+		<url-pattern>/ViewMailBody</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ComposeMail</servlet-name>
+		<url-pattern>/ComposeMail</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteMailsAction</servlet-name>
+		<url-pattern>/DeleteMailsAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TextWaterMarkAction</servlet-name>
+		<url-pattern>/TextWaterMarkAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WaterMarkTextKeyAction</servlet-name>
+		<url-pattern>/WaterMarkTextKeyAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ImageWaterMarkAction</servlet-name>
+		<url-pattern>/ImageWaterMarkAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WaterMarkImageKeyAction</servlet-name>
+		<url-pattern>/WaterMarkImageKeyAction</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendWaterMarkImage</servlet-name>
+    <url-pattern>/SendWaterMarkImage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendWaterMarkImageAction</servlet-name>
+    <url-pattern>/SendWaterMarkImageAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OutboxWaterMarkingImageAction</servlet-name>
+    <url-pattern>/OutboxWaterMarkingImageAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteWaterMarkImagesAction</servlet-name>
+    <url-pattern>/DeleteWaterMarkImagesAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VideoAudioEmbedAction</servlet-name>
+    <url-pattern>/VideoAudioEmbedAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchMailIdAction</servlet-name>
+    <url-pattern>/SearchMailIdAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileEncriptionAction</servlet-name>
+    <url-pattern>/FileEncriptionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileDecryptionAction</servlet-name>
+    <url-pattern>/FileDecryptionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileDeEmbedAction</servlet-name>
+    <url-pattern>/FileDeEmbedAction</url-pattern>
+  </servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>LoginForm.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
